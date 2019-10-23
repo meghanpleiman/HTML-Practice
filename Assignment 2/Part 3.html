@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Car Rental</title>
+        <style>
+            label{
+                display:inline-block;
+                width: 100px;
+                color:indigo;
+                margin: 5px;
+            }
+            input[type=text], select{
+				width: 125px;
+				border-radius: 5px;
+				border: 1px solid #999;
+				padding: 3px;
+             }
+            input[type=button]{
+				margin-left: 20px;
+				margin-top: 10px;
+				border-radius: 5px;
+				width: 100px;
+				border: 1px solid #777;
+				padding: 5px;
+				cursor:pointer;
+			}
+            input[type=button]:hover{
+				background-color:darkslateblue;
+				color:white;
+			}
+        </style>
+        <script>
+            function CarPayment()
+            {
+                var selectedCar = parseInt(document.getElementById("car").value);
+                var totalDays = parseInt(document.getElementById("days").value);
+                var totalInsurance = document.getElementsByName("insurance");
+                var pricePerDay = 0;
+                if(totalInsurance[0].checked){
+                    if(selectedCar == 1){
+                        pricePerDay = 45;
+                    }
+                    else if(selectedCar == 2){
+                        pricePerDay = 55;
+                    }
+                    else if(selectedCar == 3){
+                        pricePerDay = 65;
+                    }
+                }
+                else{
+                    if(selectedCar == 1){
+                        pricePerDay = 30;
+                    }
+                    else if(selectedCar == 2){
+                        pricePerDay = 40;
+                    }
+                    else if(selectedCar == 3){
+                        pricePerDay = 50;
+                    }
+                }
+                document.getElementById("output").value = pricePerDay * totalDays;
+            }
+        </script>
+    </head>
+    <body>
+        <label>Type of Car: </label>
+        <select name = "car" id = "car">
+            <option value = "1">Compact</option>
+            <option value = "2">Intermediate</option>
+            <option value = "3">Standard</option>
+        </select>
+        <br><br>
+        <label>Number of Days: </label>
+        <input type = "text" name = "days" id = "days"/>
+        <br><br>
+        <label>Insurance: </label>
+        <input type = "radio" name = "insurance" id = "yes" value = "15" checked = "checked">Yes</input>
+        <input type = "radio" name = "insurance" id = "no" value = "0">No</input>
+        <br><br>
+        <label>Total Cost: </label>
+        <input type = "text" name = "output" id = "output"/>
+        <br><br>
+        <input type = "button" onclick = "CarPayment();" value = "Total Cost"/>
+        <br><br>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<html>
+    <title>Hairdresser</title>
+    <head>
+        <style>
+            label{
+                display:inline-block;
+                width: 75px;
+                color:seagreen;
+                margin: 5px;
+            }
+            input[type=text]{
+                width: 125px;
+                border-radius: 5px;
+                border: 1px solid #999;
+                padding: 3px;
+                background-color: palegreen;
+            }
+            input[type=button]:hover{
+                background-color:darkolivegreen;
+                color:white;
+            }
+            input[type=button]{
+				margin-left: 20px;
+				margin-top: 10px;
+				border-radius: 5px;
+				width: 100px;
+				border: 1px solid #777;
+				padding: 5px;
+				cursor:pointer;
+			}
+            select{
+                background-color:palegreen;
+            }
+        </style>
+        <script>
+           function serviceTotal()
+           {
+                var selectedService = document.getElementById("service").value;
+                var selectedDiscount = document.getElementById("discount").value;
+                var serviceTotal = 0;
+                var discountTotal = 0;
+
+                if(selectedService == 125){
+                    if(selectedDiscount == .10){
+                        serviceTotal = 112.50;
+                    }
+                    else if(selectedDiscount == .20){
+                        serviceTotal = 100.00;
+                    }
+                    else if(selectedDiscount == 0){
+                        serviceTotal = 125.00;
+                    }
+                }
+                else if(selectedService == 60){
+                    if(selectedDiscount == .10){
+                        serviceTotal = 54.00;
+                    }
+                    else if(selectedDiscount == .20){
+                        serviceTotal = 48.00;
+                    }
+                    else if(selectedDiscount == 0){
+                        serviceTotal = 60.00;
+                    }
+                }
+                else if(selectedService == 35){
+                    if(selectedDiscount == .10){
+                        serviceTotal = 31.50;
+                    }
+                    else if(selectedDiscount == .20){
+                        serviceTotal = 28;
+                    }
+                    else if(selectedDiscount == 0){
+                        serviceTotal = 35;
+                    }
+                }
+                else if(selectedService == 200){
+                    if(selectedDiscount == .10){
+                        serviceTotal = 180;
+                    }
+                    else if(selectedDiscount == .20){
+                        serviceTotal = 160;
+                    }
+                    else if(selectedDiscount == 0){
+                        serviceTotal = 200;
+                    }
+                }
+                document.getElementById("output").value = serviceTotal;
+           }
+        </script>
+    </head>
+    <body>
+        <label>Service: </label>
+        <select name = "service" id = "service">
+            <option value = "125">Makeover</option>
+            <option value = "60">Hair Styling</option>
+            <option value = "35">Maincure</option>
+            <option value = "200">Permanent Makeup</option>
+        </select>
+        <br><br>
+        <label>Discount: </label>
+        <select name = "discount" id = "discount">
+            <option value = ".10">10%</option>
+            <option value = ".20">20%</option>
+            <option value = "0">None</option>
+        </select>
+        <br><br>
+        <label>Total Cost: </label>
+        <input type = "text" name = "output" id = "output"/>
+        <input type = "button" onclick = "serviceTotal();" value = "Calculate"/>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <style>
+            label{
+                display:inline-block;
+                width: 100px;
+                color:midnightblue;
+                margin: 5px;
+            }
+            input[type=text], select{
+				width: 125px;
+				border-radius: 5px;
+				border: 1px solid #999;
+				padding: 3px;
+             }
+            input[type=button]{
+				margin-left: 20px;
+				margin-top: 10px;
+				border-radius: 5px;
+				width: 100px;
+				border: 1px solid #777;
+				padding: 5px;
+				cursor:pointer;
+			}
+            input[type=button]:hover{
+				background-color:darkslateblue;
+				color:white;
+			}
+        </style>
+        <script>
+            function carLoanPayment()
+            {
+                var carPrice = parseInt(document.getElementById("price").value);
+                var moneyDown = parseInt(document.getElementById("down").value);
+                var percentageRate = parseInt(document.getElementById("rate").value);
+                var numberYears = parseInt(document.getElementById("years").value);
+                i = (percentageRate / 1200);
+                n = (numberYears * 12);
+                var totalPayment = 0;
+
+                totalPayment = ((carPrice - moneyDown) * (i) * ((1+i)**n)/((1+i)**n) - 1);
+                document.getElementById("output").value = totalPayment;
+            }
+        </script>
+    </head>
+    <body>
+        <label>Price of Car: </label>
+        <input type = "text" name = "price" id = "price"/>
+        <br><br>   
+        <label>Down Payment: </label>
+        <input type = "text" name = "down" id = "down"/>
+        <br><br>   
+        <label>Annual Percentage Rate: </label>
+        <input type = "text" name = "rate" id = "rate"/>
+        <br><br>   
+        <label>Number of Years: </label>
+        <input type = "text" name = "years" id = "years"/>
+        <br><br>   
+        <label>Monthly Payment: </label>
+        <input type = "text" name = "output" id = "output"/>
+        <input type = "button" onclick = "carLoanPayment();" value = "Loan Payment"/>
+        <br><br>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+html{
+    background-color: #ECEFF1;
+}
+#mainMenu{
+    background-color: #263238;
+    color:lightskyblue;
+    text-align: right;
+    text-indent: 10px;
+    margin-top: 0px; 
+    margin-bottom: 0px;
+}
+#secondaryMenu{
+    background-color: #607D8B;
+    color:lightskyblue;
+    margin-top: 0px; 
+    margin-bottom: 0px;
+}
+h1{
+    background-image: url("images/header-background.png");
+    padding: 7px;
+    color: white;
+    text-indent: 90px;
+    margin-top: 0px; 
+    margin-bottom: 0px;
+}
+h1 span{
+    color: #FF3D00;
+}
+ul li{
+    display: inline-block;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+h2{
+    text-align:center;
+    padding: 50px;
+    margin-top: 0px; 
+    margin-bottom: 0px;
+    margin-left: 125px;
+    margin-right: 125px;
+}
+#mainContact p{
+    text-align:left;
+    padding: 25px;
+    margin-top: 0px; 
+    margin-bottom: 0px;
+    margin-left: 125px;
+    margin-right: 125px;
+    font-size: large;
+}
+.actions ul{
+    margin-top: 0px; 
+    margin-bottom: 0px;
+    margin-left: 125px;
+    margin-right: 125px;
+    background-color: lightslategray;
+}
+.actions li{
+    text-align:left;
+    background-color: #FF3D00;
+    padding: 5px;
+}
+h3{
+    background-image: url("images/header-background.png");
+    color:white;
+    padding: 15px;
+    margin-top: 0px; 
+    margin-bottom: 0px;
+    margin-left: 125px;
+    margin-right: 125px;
+}
+p{
+    background-color:white;
+    padding: 15px;
+    margin-top: 0px; 
+    margin-bottom: 0px;
+    margin-left: 125px;
+    margin-right: 125px;
+    color:black;
+}
+section figure{
+    margin-top: 0px; 
+    margin-bottom: 0px;
+    margin-left: 125px;
+    margin-right: 125px;
+}
+footer p{
+    background-color: #263238;
+    color: white;
+}
+footer a{
+    color: lightskyblue;
+}
